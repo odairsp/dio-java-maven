@@ -4,7 +4,7 @@ package javamaven;
  * Hello world!
  *
  */
-public class App 
+public class HelloWord
 {
     public static void main( String[] args )
     {
