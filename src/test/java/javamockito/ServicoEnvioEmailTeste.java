@@ -38,6 +38,8 @@ public class ServicoEnvioEmailTeste {
         Email emailCapturado = emailCaptor.getValue();
 
         Assertions.assertEquals(mensagem, emailCapturado.getMensagem());
+        Assertions.assertEquals(email, emailCapturado.getEnderecoEmail());
+        Assertions.assertEquals(Formato.TEXTO, emailCapturado.getFormato());
 
     }
 
