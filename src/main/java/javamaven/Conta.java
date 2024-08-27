@@ -9,6 +9,26 @@ public class Conta {
         this.saldo = saldo;
     }
 
+    public void paarBoleto(Long valorAPagar) {
+        validaSaldo(valorAPagar);
+        debita(valorAPagar);
+        enviaCreditoParaEmissor(valorAPagar);
+    }
+
+    public void validaSaldo(Long valorAPagar) {
+        if (valorAPagar > saldo) {
+            throw new IllegalStateException("Saldo Insuficiente!");
+        }
+    }
+
+    public void enviaCreditoParaEmissor(Long valorAPagar) {
+        // envia
+    }
+
+    public void debita(Long valorAPagar) {
+        this.saldo -= valorAPagar;
+    }
+
     public Long getNumero() {
         return numero;
     }

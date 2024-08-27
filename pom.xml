@@ -40,6 +40,12 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>io.github.t3wv</groupId>
+      <artifactId>correios</artifactId>
+      <version>1.0.18</version>
+    </dependency>
+
   </dependencies>
 
   <build>

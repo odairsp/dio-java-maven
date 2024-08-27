@@ -1,6 +1,8 @@
 package javamaven;
 
 import org.junit.jupiter.api.Test;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,7 +23,7 @@ public class AssertionsTeste {
 
         assertNull(pessoa);
 
-        pessoa = new Pessoa("Joao", LocalDateTime.now().minusYears(25));
+        pessoa = new Pessoa("Joao","123456", LocalDate.now().minusYears(25));
 
         assertNotNull(pessoa);
     }

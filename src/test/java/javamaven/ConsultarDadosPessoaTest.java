@@ -2,7 +2,7 @@ package javamaven;
 
 import org.junit.jupiter.api.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,12 +16,12 @@ public class ConsultarDadosPessoaTest {
 
     @BeforeEach
     void insereDadosParaTeste() {
-        BancoDeDados.insereDados(new Pessoa("Jonas", LocalDateTime.of(2000, 10, 20, 15, 0)));
+        BancoDeDados.insereDados(new Pessoa("Jonas","", LocalDate.of(2000, 10, 20)));
     }
 
     @AfterEach
     void removeDadosParaTeste() {
-        BancoDeDados.removeDados(new Pessoa("Jonas", LocalDateTime.of(2000, 10, 20, 15, 0)));
+        BancoDeDados.removeDados(new Pessoa("Jonas", "",LocalDate.of(2000, 10, 20)));
     }
 
     @Test
